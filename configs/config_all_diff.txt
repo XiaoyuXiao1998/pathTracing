@@ -1,8 +1,8 @@
-output_resolution   256
+output_resolution   512
 output_file         ./output_cbox_all_diff_final.png
 camera_id           1
 light_id            2
 delta_mat           false
-spp                 1024
+spp                 2048
 max_depth           5
 integral_method     mis

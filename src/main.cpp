@@ -18,6 +18,7 @@ int main(int argc, char* argv[])
 {
     if(argc>1){
     conf.parse(argv[1]);
+    conf.printConfig();
     }
 
     //// --------------------------set camera---------------------------------------------

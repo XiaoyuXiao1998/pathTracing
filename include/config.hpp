@@ -12,6 +12,7 @@ public:
     int spp;
     int max_depth;
     std::string integral_method;
+    int num_threads = 6;
 
     Config(){
         output_resolution = 256;
@@ -24,7 +25,7 @@ public:
         integral_method = "mis";
     }
 
-    void parse(std::string filepath);
+    bool parse(std::string filepath);
     void printConfig();
 
 };
