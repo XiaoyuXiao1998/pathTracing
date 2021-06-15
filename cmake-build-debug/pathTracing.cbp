@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="pathTracing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pathTracing">
+				<Option output="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug/pathTracing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_AMD64_"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/src"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/3rdLibs"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 pathTracing"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pathTracing/fast">
+				<Option output="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug/pathTracing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_AMD64_"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/src"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/3rdLibs"/>
+					<Add directory="C:/Users/PC/CLionProjects/PathTracing/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 pathTracing/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/PC/CLionProjects/PathTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\PC\CLionProjects\PathTracing\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/AABB.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/BRDF.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/Camera.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/Integrator.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/Interaction.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/Ray.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/config.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/geometry.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/light.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/objloader.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/scene.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/test_componet.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/include/utils.hpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/AABB.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/BRDF.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/Camera.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/Config.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/Integrator.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/geometry.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/light.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/main.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/objloader.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/scene.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/test_components.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/src/utils.cpp">
+			<Option target="pathTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/CLionProjects/PathTracing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
