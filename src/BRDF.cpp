@@ -9,10 +9,10 @@ float  Idealdiffusion::sample(Interaction &interact) {
     float r1 = dis(random_generator);
     float r2 = dis(random_generator);
     //r1
-    float y = sqrtf(1 - r1 * r1);
+    float y = sqrtf(1 -  r1);
     float phi = 2 * PI * r2;
-    float x = r1 * cosf(phi);
-    float z = r1 * sinf(phi);
+    float x = sqrt(r1) * cosf(phi);
+    float z = sqrt(r1)* sinf(phi);
     // wi is the direction of light source cast on light point;
     interact.wi = Eigen::Vector3f(x,y,z); // needs to be transformed to world coordnate;
     //create local hemisphere coordinate
@@ -25,7 +25,7 @@ float  Idealdiffusion::sample(Interaction &interact) {
         right = Eigen::Vector3f (0,-up.z(),up.y());
         right = right.normalized();
     }
-    Eigen::Vector3f forward = up.cross(right);
+    Eigen::Vector3f forward = right.cross(up);
     //transform sampled wi from local coordinatev to world coordiante
     interact.wi =  interact.wi[0]*right + interact.wi[1]*up + interact.wi[2]*forward;
     interact.wi = interact.wi.normalized();

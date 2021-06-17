@@ -36,10 +36,10 @@ int main(int argc, char* argv[])
     Eigen::Vector2f light_size;
     if (conf.light_id == 1)
     {
-        // Light setting 1
-        light_pos = Eigen::Vector3f(0, 5.95, -6);
-        light_radiance = Eigen::Vector3f(1.0, 1.0, 1.0) * 60;
-        light_size = Eigen::Vector2f(2.0, 2.0);
+
+        light_pos = Eigen::Vector3f(0, 6.00, -6);
+        light_radiance = Eigen::Vector3f(1.0, 0.5, 0.3) * 40;
+        light_size = Eigen::Vector2f(5.0, 4.0);
     }
 
     AreaLight light(light_pos, light_radiance, light_size);
@@ -123,6 +123,7 @@ int main(int argc, char* argv[])
     mesh_bunny.buildUniformGrid();
     scene.add_object(&mesh_dragon);
     scene.add_object(&mesh_bunny);
+
 
 
 

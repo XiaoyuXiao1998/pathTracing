@@ -89,9 +89,12 @@ Eigen::Vector3f Integrator::radiance(Ray ray,Interaction &interaction,int max_de
 
     if(!scene->isShadowed(light_ray)){
 
-        L_dir =scene->get_light()->emission(light_pos,light_ray.direction).cwiseProduct(f_r)*
-               light_ray.direction.dot(interaction.normal)/
-               (light_pos-interaction.entry_point).dot((light_pos-interaction.entry_point))/(pdf_dir);
+        if(light_ray.direction.dot(interaction.normal) > 0 ) {
+            L_dir = scene->get_light()->emission(light_pos, -light_ray.direction).cwiseProduct(f_r) *
+                    light_ray.direction.dot(interaction.normal) *
+                    light_ray.direction.dot(-scene->get_light()->get_normal()) /
+                    (light_pos - interaction.entry_point).dot((light_pos - interaction.entry_point)) / (pdf_dir);
+        }
 
     }
 
@@ -106,6 +109,7 @@ Eigen::Vector3f Integrator::radiance(Ray ray,Interaction &interaction,int max_de
     //uniformally samplle the hemisphere toward wi;
     //get a direction wi stored
     float pdf_hemi = brdf->sample(interaction);
+
     Interaction newinteraction;
     Ray newray(interaction.entry_point,interaction.wi);
 
@@ -114,6 +118,8 @@ Eigen::Vector3f Integrator::radiance(Ray ray,Interaction &interaction,int max_de
 
     if(newinteraction.type == Interaction::LIGHT) return  L_dir + L_undir;
     L_undir = radiance(newray,newinteraction,++max_depth).cwiseProduct(f_r)*interaction.normal.dot(newray.direction)/pdf_hemi/P_RR;
+
+
 
     return L_dir + L_undir;
 

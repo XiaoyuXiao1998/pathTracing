@@ -24,6 +24,7 @@ bool Scene::intersect(const Ray & ray, Interaction& interaction) {
             Interaction current_interaction;
 
             if(objects[i]->intersect(ray,current_interaction)){
+                std::cout<<current_interaction.entry_dis<<"false"<<std::endl;
                 if(final_interaction.entry_dis==-1.0f || current_interaction.entry_dis < final_interaction.entry_dis){
                     final_interaction = current_interaction;
 
@@ -45,6 +46,7 @@ bool Scene::intersect(const Ray & ray, Interaction& interaction) {
 bool Scene::isShadowed(const Ray & ray) {
     Interaction interaction;
     intersect(ray,interaction);
+
 
     if(interaction.type != Interaction::LIGHT) return true;
     return false;

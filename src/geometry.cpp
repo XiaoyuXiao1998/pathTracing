@@ -70,11 +70,10 @@ bool sphere::intersect( const Ray &ray, Interaction &interaction) {
             t0 = t1;
             if(t0 <0) return false;
         }
-        float t = t0;
-     if(t<ray.range_min || t>ray.range_max) return false;
-        interaction.entry_dis = t;
-        interaction.exit_dis = t;
-        interaction.entry_point = ray.getpoint(t);
+     if(t0<ray.range_min || t0>ray.range_max) return false;
+        interaction.entry_dis = t0;
+        interaction.exit_dis = t1;
+        interaction.entry_point = ray.getpoint(t0);
         interaction.normal = (interaction.entry_point - position).normalized();
         interaction.type = Interaction::Type::GEOMETRY;
         if(brdf!=nullptr){
@@ -236,9 +235,11 @@ bool TriangleMesh::intersect(const Ray &ray, Interaction &interaction)
 
 
     } else {
+        float t_in,tout;
+        if(!aabb.intersect(ray,t_in,tout)) return false;
         for (int i = 0; i < num_triangles; i++) {
             Interaction cur_it;
-            if (raySingleTriangleIntersection(cur_it, ray, 3 * i, 3 * i + 1, 3 * i + 2,0)) {
+            if (raySingleTriangleIntersection(cur_it, ray, vertices_index[3 * i], vertices_index[3 * i+1], vertices_index[3 * i+2],0)) {
                 if (final_interaction.entry_dis == -1 || cur_it.entry_dis < final_interaction.entry_dis) {
                     final_interaction = cur_it;
                 }
@@ -284,10 +285,11 @@ void TriangleMesh::buildUniformGrid() {
     }
     // insert all triangles into the cells;
     // cells need to store the information of
-    for(uint32_t i = 0; i< num_triangles;i+=3){
-        Eigen::Vector3f A = vertices[vertices_index[i]];
-        Eigen::Vector3f B = vertices[vertices_index[i+1]];
-        Eigen::Vector3f C = vertices[vertices_index[i+2]];
+    int p =0;
+    for(unsigned int i = 0; i< num_triangles;i++){
+        Eigen::Vector3f A = vertices[vertices_index[3*i]];
+        Eigen::Vector3f B = vertices[vertices_index[3*i+1]];
+        Eigen::Vector3f C = vertices[vertices_index[3*i+2]];
 
         // build a bounding box for picked triangle
         AABB  triangle_box(A,B,C);
@@ -303,16 +305,20 @@ void TriangleMesh::buildUniformGrid() {
         uint32_t xmin = mathutils::clamp(std::floor(min[0]), 0, resolution[0] - 1);
         uint32_t xmax = mathutils::clamp(std::floor(max[0]), 0, resolution[0] - 1);
 
+
         for (uint32_t z = zmin; z <= zmax; ++z) {
             for (uint32_t y = ymin; y <= ymax; ++y) {
                 for (uint32_t x = xmin; x <= xmax; ++x) {
+                    p++;
                     uint32_t o = z * resolution[0] * resolution[1] + y * resolution[0] + x;
-                    grids[o].push_back(Eigen::Vector4i(vertices_index[i],vertices_index[i+1],vertices_index[i+2],normals_index[i]));
+                    grids[o].push_back(Eigen::Vector4i(vertices_index[3*i],vertices_index[3*i+1],vertices_index[3*i+2],normals_index[3*i]));
 
                 }
             }
         }
+
     }
+
     has_grid = true;
 }
 

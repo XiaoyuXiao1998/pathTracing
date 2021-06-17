@@ -27,6 +27,8 @@ bool AreaLight::intersect(const Ray &ray,Interaction & interaction) {
 Eigen::Vector3f AreaLight::emission(Eigen::Vector3f pos, Eigen::Vector3f dir)
 {
 
+
+
     return radiance*(normal.dot(dir));
 
 }

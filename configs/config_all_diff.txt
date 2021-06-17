@@ -1,8 +1,8 @@
-output_resolution   512
-output_file         ./output_cbox_all_diff_final.png
+output_resolution   256
+output_file         ./output_cbox_all_diff_final_only_sphere.png
 camera_id           1
 light_id            1
 delta_mat           false
-spp                 2048
+spp                 500
 max_depth           5
 integral_method     mis

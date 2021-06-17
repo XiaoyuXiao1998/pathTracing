@@ -1052,7 +1052,41 @@ lapacke_mangling.h
 
 ../3rdLibs/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-../include/config.hpp
+../include/AABB.hpp
+utils.hpp
+../include/utils.hpp
+Ray.hpp
+../include/Ray.hpp
+
+../include/BRDF.hpp
+utils.hpp
+../include/utils.hpp
+Interaction.hpp
+../include/Interaction.hpp
+
+../include/Interaction.hpp
+utils.hpp
+../include/utils.hpp
+
+../include/Ray.hpp
+Eigen/dense
+-
+utils.hpp
+-
+
+../include/geometry.hpp
+Eigen/Dense
+../include/Eigen/Dense
+utils.hpp
+../include/utils.hpp
+BRDF.hpp
+../include/BRDF.hpp
+Ray.hpp
+../include/Ray.hpp
+AABB.hpp
+../include/AABB.hpp
+
+../include/objloader.hpp
 utils.hpp
 ../include/utils.hpp
 
@@ -1070,9 +1104,9 @@ random
 omp.h
 ../include/omp.h
 
-C:/Users/PC/CLionProjects/PathTracing/src/Config.cpp
-config.hpp
-C:/Users/PC/CLionProjects/PathTracing/src/config.hpp
-fstream
-C:/Users/PC/CLionProjects/PathTracing/src/fstream
+C:/Users/PC/CLionProjects/PathTracing/src/geometry.cpp
+geometry.hpp
+C:/Users/PC/CLionProjects/PathTracing/src/geometry.hpp
+objloader.hpp
+C:/Users/PC/CLionProjects/PathTracing/src/objloader.hpp
 
