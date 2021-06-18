@@ -19,21 +19,7 @@ bool Scene::intersect(const Ray & ray, Interaction& interaction) {
 
 
     }
-    if(final_interaction.entry_dis == -1){
-        for(int i = 0;i<objects.size();i++){
-            Interaction current_interaction;
 
-            if(objects[i]->intersect(ray,current_interaction)){
-                std::cout<<current_interaction.entry_dis<<"false"<<std::endl;
-                if(final_interaction.entry_dis==-1.0f || current_interaction.entry_dis < final_interaction.entry_dis){
-                    final_interaction = current_interaction;
-
-                }
-            }
-
-
-        }
-    }
 
     if(final_interaction.entry_dis != -1 && final_interaction.entry_dis >= ray.range_min && final_interaction.entry_dis<= ray.range_max){
         interaction  = final_interaction;
